@@ -1,0 +1,14 @@
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/JsonSchemaFactory.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/JsonSchemaPackage.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/Schema.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/SchemaEntry.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/StringListEntry.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/Type.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/impl/JsonSchemaFactoryImpl.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/impl/JsonSchemaPackageImpl.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/impl/SchemaEntryImpl.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/impl/SchemaImpl.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/impl/StringListEntryImpl.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/util/JsonSchemaAdapterFactory.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/util/JsonSchemaEPackageResourceSetCapabilityFactory.java
+/home/runner/work/json-schema/json-schema/model/src/main/java/org/nasdanika/models/json/schema/util/JsonSchemaSwitch.java
