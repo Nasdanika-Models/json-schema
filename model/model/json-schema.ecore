@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="jsonschema" nsURI="ecore://nasdanika.org/models/json-schema"
-    nsPrefix="org.nasdanika.models.json.schema">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="schema" nsURI="ecore://nasdanika.org/models/json/schema" nsPrefix="org.nasdanika.models.json.schema">
   <eClassifiers xsi:type="ecore:EClass" name="Schema">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Represents a JSON Schema 2020-12 schema object. All features are optional."/>
@@ -41,7 +40,8 @@
         <details key="documentation" value="JSON Schema keyword: $comment. A comment for schema authors."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defs" upperBound="-1" eType="#//SchemaEntry" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defs" upperBound="-1" eType="#//SchemaEntry"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: $defs. Schema definitions (reusable sub-schemas)."/>
       </eAnnotations>
@@ -51,7 +51,8 @@
         <details key="documentation" value="When non-null, the schema is a boolean schema (true or false). Null means it is an object schema."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="types" upperBound="-1" eType="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="types" upperBound="-1"
+        eType="#//Type">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: type. List of allowed JSON types."/>
       </eAnnotations>
@@ -131,7 +132,8 @@
         <details key="documentation" value="JSON Schema keyword: maxContains. Maximum number of items matching the contains schema."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: required. List of required property names."/>
       </eAnnotations>
@@ -146,27 +148,32 @@
         <details key="documentation" value="JSON Schema keyword: maxProperties. Maximum number of object properties."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependentRequired" upperBound="-1" eType="#//StringListEntry" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependentRequired" upperBound="-1"
+        eType="#//StringListEntry" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: dependentRequired. Maps property names to required dependencies."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allOf" upperBound="-1" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allOf" upperBound="-1"
+        eType="#//Schema" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: allOf. The instance must be valid against all sub-schemas."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="anyOf" upperBound="-1" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anyOf" upperBound="-1"
+        eType="#//Schema" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: anyOf. The instance must be valid against at least one sub-schema."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="oneOf" upperBound="-1" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="oneOf" upperBound="-1"
+        eType="#//Schema" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: oneOf. The instance must be valid against exactly one sub-schema."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="not" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="not" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: not. The instance must NOT be valid against this schema."/>
       </eAnnotations>
@@ -176,52 +183,62 @@
         <details key="documentation" value="JSON Schema keyword: if. Conditional schema - if this schema validates successfully, then apply 'then'."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="then" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: then. Applied when 'if' passes validation."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="else" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: else. Applied when 'if' fails validation."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1" eType="#//SchemaEntry" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//SchemaEntry" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: properties. Schemas for specific object properties."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="patternProperties" upperBound="-1" eType="#//SchemaEntry" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patternProperties" upperBound="-1"
+        eType="#//SchemaEntry" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: patternProperties. Schemas for properties matching regex patterns."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalProperties" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalProperties" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: additionalProperties (schema). Schema for properties not covered by 'properties' or 'patternProperties'."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalPropertiesBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="additionalPropertiesBoolean"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: additionalProperties (boolean). Boolean value for additionalProperties."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unevaluatedProperties" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unevaluatedProperties"
+        eType="#//Schema" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: unevaluatedProperties (schema). Schema for properties not evaluated by adjacent keywords."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unevaluatedPropertiesBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unevaluatedPropertiesBoolean"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: unevaluatedProperties (boolean). Boolean value for unevaluatedProperties."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependentSchemas" upperBound="-1" eType="#//SchemaEntry" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependentSchemas" upperBound="-1"
+        eType="#//SchemaEntry" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: dependentSchemas. Schemas applied when specific properties are present."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="items" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: items (schema). Schema for array items (applied to items beyond prefixItems)."/>
       </eAnnotations>
@@ -231,17 +248,20 @@
         <details key="documentation" value="JSON Schema keyword: items (boolean). Boolean value for items."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prefixItems" upperBound="-1" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prefixItems" upperBound="-1"
+        eType="#//Schema" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: prefixItems. Schemas for the prefix of array items (positional validation)."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: contains. At least one array item must match this schema."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unevaluatedItems" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unevaluatedItems" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: unevaluatedItems. Schema for array items not evaluated by prefixItems or contains."/>
       </eAnnotations>
@@ -276,7 +296,8 @@
         <details key="documentation" value="JSON Schema keyword: writeOnly. Indicates the value is write-only."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="examples" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="examples" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: examples. Example values as JSON string representations."/>
       </eAnnotations>
@@ -296,7 +317,8 @@
         <details key="documentation" value="JSON Schema keyword: contentMediaType. Media type of the content (e.g., 'application/json')."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contentSchema" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contentSchema" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON Schema keyword: contentSchema. Schema for the decoded content."/>
       </eAnnotations>
@@ -311,7 +333,8 @@
         <details key="documentation" value="The key (property name, pattern, or definition name)."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Schema" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Schema"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The schema value associated with the key."/>
       </eAnnotations>
@@ -326,7 +349,8 @@
         <details key="documentation" value="The property name."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The list of required property names that depend on the key property."/>
       </eAnnotations>
@@ -336,7 +360,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="JSON Schema primitive types."/>
     </eAnnotations>
-    <eLiterals name="object" value="0">
+    <eLiterals name="object">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="JSON object type."/>
       </eAnnotations>

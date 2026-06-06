@@ -1,21 +1,20 @@
 package org.nasdanika.models.json.schema.util;
 
-import org.nasdanika.models.json.schema.JsonSchemaPackage;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
+import org.nasdanika.capability.emf.EPackageCapabilityFactory;
+import org.nasdanika.models.json.schema.SchemaPackage;
 
-/**
- * Registers {@link JsonSchemaPackage} with the EMF global EPackage registry.
- * Integrate with {@code org.nasdanika.capability.emf.EPackageCapabilityFactory}
- * when the nasdanika-core capability module is available on the class path.
- */
-public class JsonSchemaEPackageResourceSetCapabilityFactory {
+public class JsonSchemaEPackageResourceSetCapabilityFactory extends EPackageCapabilityFactory {
 
-/**
- * Accesses {@link JsonSchemaPackage#eINSTANCE} to trigger its registration
- * with the EMF global EPackage registry, making it available to ResourceSets.
- */
-public static void register() {
-@SuppressWarnings("unused")
-JsonSchemaPackage pkg = JsonSchemaPackage.eINSTANCE;
-}
+	@Override
+	protected EPackage getEPackage() {
+		return SchemaPackage.eINSTANCE;
+	}
+
+	@Override
+	protected URI getDocumentationURI() {
+		return URI.createURI("https://json-schema.models.nasdanika.org/");
+	}
 
 }
